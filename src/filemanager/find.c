@@ -120,6 +120,7 @@ typedef struct
 
 /*** file scope variables ************************************************************************/
 
+
 /* button callbacks */
 static int start_stop (WButton * button, int action);
 static int find_do_view_file (WButton * button, int action);
@@ -138,11 +139,8 @@ static WCheck *file_case_sens_cbox;     /* "case sensitive" checkbox */
 static WCheck *file_pattern_cbox;       /* File name is glob or regexp */
 static WCheck *recursively_cbox;
 static WCheck *skip_hidden_cbox;
-<<<<<<< HEAD
-=======
 static WCheck *only_directories_cbox;
 static WCheck *content_use_cbox;        /* Take into account the Content field */
->>>>>>> osp/only-directories
 static WCheck *content_case_sens_cbox;  /* "case sensitive" checkbox */
 static WCheck *content_regexp_cbox;     /* "find regular expression" checkbox */
 static WCheck *content_first_hit_cbox;  /* "First hit" checkbox" */
@@ -569,17 +567,13 @@ find_parameters (char **start_dir, ssize_t * start_dir_len,
     /* file name */
     const char *file_name_label = N_("File name:");
     const char *file_recurs_label = N_("&Find recursively");
-<<<<<<< HEAD
     const char *file_pattern_label = N_("&Using shell patterns");
-=======
     const char *file_skip_hidden_label = N_("S&kip hidden");
     const char *file_only_directories_label = N_("Only &directories");
->>>>>>> osp/only-directories
 #ifdef HAVE_CHARSET
     const char *file_all_charsets_label = N_("&All charsets");
 #endif
     const char *file_case_label = N_("Cas&e sensitive");
-    const char *file_skip_hidden_label = N_("S&kip hidden");
 
     /* file content */
     const char *content_content_label = N_("Content:");
@@ -606,12 +600,9 @@ find_parameters (char **start_dir, ssize_t * start_dir_len,
 
         file_name_label = _(file_name_label);
         file_recurs_label = _(file_recurs_label);
-<<<<<<< HEAD
         file_pattern_label = _(file_pattern_label);
-=======
         file_skip_hidden_label = _(file_skip_hidden_label);
 	file_only_directories_label = _(file_only_directories_label);
->>>>>>> osp/only-directories
 #ifdef HAVE_CHARSET
         file_all_charsets_label = _(file_all_charsets_label);
 #endif
@@ -720,9 +711,7 @@ find_parameters (char **start_dir, ssize_t * start_dir_len,
     recursively_cbox = check_new (y1++, x1, options.find_recurs, file_recurs_label);
     add_widget (find_dlg, recursively_cbox);
 
-    cbox_position = FIND_Y - 5;
-
-    only_directories_cbox = check_new (cbox_position--, 3, options.only_directories, file_only_directories_label);
+    only_directories_cbox = check_new (y1++, x1, options.only_directories, file_only_directories_label);
     add_widget (find_dlg, only_directories_cbox);
 
     file_pattern_cbox = check_new (y1++, x1, options.file_pattern, file_pattern_label);
@@ -1388,12 +1377,10 @@ do_search (WDialog * h)
                     tmp_vpath = vfs_path_build_filename (directory, dp->d_name, (char *) NULL);
 
                     if (mc_lstat (tmp_vpath, &tmp_stat) == 0 && S_ISDIR (tmp_stat.st_mode))
-<<<<<<< HEAD
-=======
                     {
 			is_dir = TRUE;
->>>>>>> osp/only-directories
                         push_directory (tmp_vpath);
+}
                     else
                         vfs_path_free (tmp_vpath);
                 }
