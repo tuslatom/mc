@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+  
+
+
+  <head>
+    <title>
+      mc-git-autopoint.patch na Hlášení #1885 – Příloha
+     – Midnight Commander
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/search" />
+        <link rel="help" href="/wiki/TracGuide" />
+        <link rel="alternate" href="/raw-attachment/ticket/1885/mc-git-autopoint.patch" type="text/x-diff; charset=utf-8" title="Původní formát" />
+        <link rel="up" href="/ticket/1885" title="Hlášení #1885" />
+        <link rel="start" href="/wiki" />
+        <link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/diff.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" />
+        <link rel="shortcut icon" href="/chrome/site/MidnightCommander.ico" type="image/x-icon" />
+        <link rel="icon" href="/chrome/site/MidnightCommander.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="/search/opensearch" title="Prohledat Midnight Commander" />
+    <script type="text/javascript" src="/chrome/common/js/jquery.js"></script><script type="text/javascript" src="/chrome/common/js/babel.js"></script><script type="text/javascript" src="/chrome/common/js/messages/cs.js"></script><script type="text/javascript" src="/chrome/common/js/trac.js"></script><script type="text/javascript" src="/chrome/common/js/search.js"></script><script type="text/javascript" src="/chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+      <script type="text/javascript" src="/chrome/common/js/folding.js"></script>
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          $('#preview table.code').enableCollapsibleColumns($('#preview table.code thead th.content'));
+        });
+      </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="https://www.midnight-commander.org"><img src="/chrome/site/MidnightCommander.png" alt="Midnight Commander" /></a>
+      </div>
+      <form id="search" action="/search" method="get">
+        <div>
+          <label for="proj-search">Hledat:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Hledat" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/login">Přihlásit</a></li><li><a href="/prefs">Předvolby</a></li><li><a href="/wiki/TracGuide">Nápověda/Příručka</a></li><li><a href="/about">O systému Trac</a></li><li class="last"><a href="/register">Registrovat</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki">Home</a></li><li><a href="/timeline">Historie</a></li><li><a href="/roadmap">Plán práce</a></li><li><a href="/browser">Zdrojové kódy</a></li><li><a href="/report">Zobrazit hlášení</a></li><li><a href="/search">Hledat</a></li><li class="last"><a href="http://ftp.midnight-commander.org/?C=N;O=D">Downloads</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Kontextová navigace</h2>
+          <ul>
+              <li class="last first"><a href="/ticket/1885">Zpět na Hlášení #1885</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="attachment">
+        <h1><a href="/ticket/1885">Hlášení #1885</a>: mc-git-autopoint.patch</h1>
+        <table id="info" summary="Popis">
+          <tbody>
+            <tr>
+              <th scope="col">Soubor mc-git-autopoint.patch,
+                <span title="4222 bytů">4.1 KB</span>
+                (přidal uživatel s01ja, před <a class="timeline" href="/timeline?from=2010-01-31T01%3A40%3A25Z&amp;precision=second" title="2010-01-31T01:40:25Z v historii">6 lety</a>)</th>
+            </tr>
+            <tr>
+              <td class="message searchable">
+                <p>
+patch allowing testing without cvs installed
+</p>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="preview" class="searchable">
+          
+  <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2>
+          <a>autogen.sh</a>
+        </h2>
+        <table class="trac-diff inline" summary="Rozdíly" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="File mc.org/autogen.sh 2010-01-31 00:16:34.000000000 +0100">
+                      old
+                  </th>
+                  <th title="File mc/autogen.sh 2010-01-31 02:15:09.799409923 +0100">
+                      new
+                  </th>
+                  <td><em></em> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>25</th><th>25</th><td class="l"><span>if test $? -ne 0;&nbsp; then</span> </td>
+                  </tr><tr>
+                          <th>26</th><th>26</th><td class="l"><span>&nbsp; &nbsp; AUTOPOINT=maint/autopoint</span> </td>
+                  </tr><tr>
+                          <th>27</th><th>27</th><td class="l"><span>fi</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>28</th><td class="r"><ins>cvs -v &gt;/dev/null 2&gt;&amp;1</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>29</th><td class="r"><ins>if test $? -ne 0;&nbsp; then</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>30</th><td class="r"><ins>&nbsp; &nbsp; AUTOPOINT=maint/autopoint</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>31</th><td class="r"><ins>fi</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>28</th><th>32</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>29</th><th>33</th><td class="l"><span>cd "$srcdir"</span> </td>
+                  </tr><tr>
+                          <th>30</th><th>34</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+      <li class="entry">
+        <h2>
+          <a>maint/autopoint</a>
+        </h2>
+        <pre>diff -ru mc.org/maint/autopoint mc/maint/autopoint</pre>
+        <table class="trac-diff inline" summary="Rozdíly" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="File mc.org/maint/autopoint 2010-01-31 00:16:35.000000000 +0100">
+                      old
+                  </th>
+                  <th title="File mc/maint/autopoint 2010-01-31 02:21:19.169377238 +0100">
+                      new
+                  </th>
+                  <td><em></em> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>340</th><th>340</th><td class="l"><span># users of CVS.</span> </td>
+                  </tr><tr>
+                          <th>341</th><th>341</th><td class="l"><span>#</span> </td>
+                  </tr><tr>
+                          <th>342</th><th>342</th><td class="l"><span># Check availability of the CVS program.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>343</th><th> </th><td class="l"><span>(cvs -v) &gt;/dev/null 2&gt;/dev/null || func_fatal_error "cvs program not found"</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>343</th><td class="r"><span># (cvs -v) &gt;/dev/null 2&gt;/dev/null || func_fatal_error "cvs program not found"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>344</th><td class="r"><span>withcvs=true</span> </td>
+                      </tr><tr>
+                        <th> </th><th>345</th><td class="r"><span>cvs -v &gt;/dev/null 2&gt;&amp;1</span> </td>
+                      </tr><tr>
+                        <th> </th><th>346</th><td class="r"><span>if test $? -ne 0;&nbsp; then</span> </td>
+                      </tr><tr>
+                        <th> </th><th>347</th><td class="r"><span>&nbsp; echo "cvs program not found. it could be possible that we still continue."</span> </td>
+                      </tr><tr>
+                        <th> </th><th>348</th><td class="r"><span>&nbsp; echo "when you are a translator you are MAYBE better off using csv and"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>349</th><td class="r"><span>&nbsp; echo "the purposed version of gettext (as this 'autopoint' script checks"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>350</th><td class="r"><span>&nbsp; echo "out a specific version of gettext.)"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>351</th><td class="r"><span>&nbsp; echo "when your distribution is nice it should be possible to copy"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>352</th><td class="r"><span>&nbsp; echo "with the installed version of your files."</span> </td>
+                      </tr><tr>
+                        <th> </th><th>353</th><td class="r"><span>&nbsp; echo "this will pollute your source directory with some trash"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>354</th><td class="r"><span>&nbsp; echo "when things fail:"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>355</th><td class="r"><span>&nbsp; echo "install cvs and/or a version of autopoint"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>356</th><td class="r"><span>&nbsp; echo "when you modified po/intl/m4 you should stop here"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>357</th><td class="r"><span>&nbsp; echo "press return to continue anyway or ctrl+c and install cvs"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>358</th><td class="r"><span>&nbsp; read</span> </td>
+                      </tr><tr>
+                        <th> </th><th>359</th><td class="r"><span>&nbsp; withcvs=false</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>360</th><td class="r"><span>fi</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>344</th><th>361</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>345</th><th>362</th><td class="l"><span># Check in which directory config.rpath, mkinstalldirs etc. belong.</span> </td>
+                  </tr><tr>
+                          <th>346</th><th>363</th><td class="l"><span>auxdir=`cat "$configure_in" | grep '^AC_CONFIG_AUX_DIR' | sed -n -e 's/AC_CONFIG_AUX_DIR(\([^()]*\))/\1/p' | sed -e 's/^\[\(.*\)\]$/\1/' | sed -e 1q`</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="#L417">…</a></th>
+                  <th><a href="#L434">…</a></th>
+                  <td><em></em> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>417</th><th>434</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>418</th><th>435</th><td class="l"><span># Need to pass -d "$CVSROOT", because there may be a CVS directory in the</span> </td>
+                  </tr><tr>
+                          <th>419</th><th>436</th><td class="l"><span># current directory.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>420</th><th> </th><td class="l"><span>cvs -d "$CVSROOT" init</span> </td>
+                      </tr><tr>
+                        <th>421</th><th> </th><td class="l"><span>gzip -d -c &lt; "$gettext_dir/archive.tar.gz" | (cd "$cvs_dir" &amp;&amp; tar xf -)</span> </td>
+                      </tr><tr>
+                        <th>422</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>423</th><th> </th><td class="l"><span>cd "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th>424</th><th> </th><td class="l"><span>cvsver=gettext-`echo "$ver" | sed -e 's/\./_/g'`</span> </td>
+                      </tr><tr>
+                        <th>425</th><th> </th><td class="l"><span>(cvs checkout -r"$cvsver" archive &gt; /dev/null) 2&gt;&amp;1 | grep -v '^cvs checkout: Updating'</span> </td>
+                      </tr><tr>
+                        <th>426</th><th> </th><td class="l"><span>find archive -name CVS -type d -print | xargs rm -rf</span> </td>
+                      </tr><tr>
+                        <th>427</th><th> </th><td class="l"><span># Check that really all CVS directories are gone, otherwise we would overwrite</span> </td>
+                      </tr><tr>
+                        <th>428</th><th> </th><td class="l"><span># the contents of the user's CVS directories.</span> </td>
+                      </tr><tr>
+                        <th>429</th><th> </th><td class="l"><span>if test `find archive -name CVS -type d -print | wc -l` != 0; then</span> </td>
+                      </tr><tr>
+                        <th>430</th><th> </th><td class="l"><span>&nbsp; cd ..</span> </td>
+                      </tr><tr>
+                        <th>431</th><th> </th><td class="l"><span>&nbsp; rm -rf "$cvs_dir" "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th>432</th><th> </th><td class="l"><span>&nbsp; func_fatal_error "failed to remove all CVS subdirectories"</span> </td>
+                      </tr><tr>
+                        <th>433</th><th> </th><td class="l"><span>fi</span> </td>
+                      </tr><tr>
+                        <th>434</th><th> </th><td class="l"><span>if test `find archive -type f -print | wc -l` = 0; then</span> </td>
+                      </tr><tr>
+                        <th>435</th><th> </th><td class="l"><span>&nbsp; cd ..</span> </td>
+                      </tr><tr>
+                        <th>436</th><th> </th><td class="l"><span>&nbsp; rm -rf "$cvs_dir" "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th>437</th><th> </th><td class="l"><span>&nbsp; func_fatal_error "infrastructure files for version $ver not found; this is autopoint from GNU $package $version"</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>437</th><td class="r"><span>if test "${withcvs}" = "true"; then</span> </td>
+                      </tr><tr>
+                        <th> </th><th>438</th><td class="r"><span>&nbsp; # the original code that untars the 'archive' in /usr/share/gettext</span> </td>
+                      </tr><tr>
+                        <th> </th><th>439</th><td class="r"><span>&nbsp; # and detects local modifications</span> </td>
+                      </tr><tr>
+                        <th> </th><th>440</th><td class="r"><span>&nbsp; # the result is a copy of m4,po,intl,ABOUT_NLS and config.rpath</span> </td>
+                      </tr><tr>
+                        <th> </th><th>441</th><td class="r"><span>&nbsp; # this files are available in the /usr/share/gettext directory</span> </td>
+                      </tr><tr>
+                        <th> </th><th>442</th><td class="r"><span>&nbsp; # and the cvs is only needed when a translator modifies the files</span> </td>
+                      </tr><tr>
+                        <th> </th><th>443</th><td class="r"><span>&nbsp; cvs -d "$CVSROOT" init</span> </td>
+                      </tr><tr>
+                        <th> </th><th>444</th><td class="r"><span>&nbsp; gzip -d -c &lt; "$gettext_dir/archive.tar.gz" | (cd "$cvs_dir" &amp;&amp; tar xf -)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>445</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>446</th><td class="r"><span>&nbsp; cd "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>447</th><td class="r"><span>&nbsp; cvsver=gettext-`echo "$ver" | sed -e 's/\./_/g'`</span> </td>
+                      </tr><tr>
+                        <th> </th><th>448</th><td class="r"><span>&nbsp; (cvs checkout -r"$cvsver" archive &gt; /dev/null) 2&gt;&amp;1 | grep -v '^cvs checkout: Updating'</span> </td>
+                      </tr><tr>
+                        <th> </th><th>449</th><td class="r"><span>&nbsp; find archive -name CVS -type d -print | xargs rm -rf</span> </td>
+                      </tr><tr>
+                        <th> </th><th>450</th><td class="r"><span>&nbsp; # Check that really all CVS directories are gone, otherwise we would overwrite</span> </td>
+                      </tr><tr>
+                        <th> </th><th>451</th><td class="r"><span>&nbsp; # the contents of the user's CVS directories.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>452</th><td class="r"><span>&nbsp; if test `find archive -name CVS -type d -print | wc -l` != 0; then</span> </td>
+                      </tr><tr>
+                        <th> </th><th>453</th><td class="r"><span>&nbsp; &nbsp; cd ..</span> </td>
+                      </tr><tr>
+                        <th> </th><th>454</th><td class="r"><span>&nbsp; &nbsp; rm -rf "$cvs_dir" "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>455</th><td class="r"><span>&nbsp; &nbsp; func_fatal_error "failed to remove all CVS subdirectories"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>456</th><td class="r"><span>&nbsp; fi</span> </td>
+                      </tr><tr>
+                        <th> </th><th>457</th><td class="r"><span>&nbsp; if test `find archive -type f -print | wc -l` = 0; then</span> </td>
+                      </tr><tr>
+                        <th> </th><th>458</th><td class="r"><span>&nbsp; &nbsp; cd ..</span> </td>
+                      </tr><tr>
+                        <th> </th><th>459</th><td class="r"><span>&nbsp; &nbsp; rm -rf "$cvs_dir" "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>460</th><td class="r"><span>&nbsp; &nbsp; func_fatal_error "infrastructure files for version $ver not found; this is autopoint from GNU $package $version"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>461</th><td class="r"><span>&nbsp; fi</span> </td>
+                      </tr><tr>
+                        <th> </th><th>462</th><td class="r"><span>else</span> </td>
+                      </tr><tr>
+                        <th> </th><th>463</th><td class="r"><span>&nbsp; # workarround for missing cvs</span> </td>
+                      </tr><tr>
+                        <th> </th><th>464</th><td class="r"><span>&nbsp; # does overwrite any development changes, but as we checked out from git this might be ok</span> </td>
+                      </tr><tr>
+                        <th> </th><th>465</th><td class="r"><span>&nbsp; cd "$work_dir"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>466</th><td class="r"><span>&nbsp; mkdir archive</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>467</th><td class="r"><span>&nbsp; cp -r ${gettext_dir}/* ./archive</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>438</th><th>468</th><td class="l"><span>fi</span> </td>
+                  </tr><tr>
+                          <th>439</th><th>469</th><td class="l"><span>cd ..</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>440</th><th> </th><td class="l"><del></del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>441</th><th>470</th><td class="l"><span># func_destfile file</span> </td>
+                  </tr><tr>
+                          <th>442</th><th>471</th><td class="l"><span># determines the destination file, relative to the package's top level</span> </td>
+                  </tr><tr>
+                          <th>443</th><th>472</th><td class="l"><span># directory, for a given file name, relative to archive.</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+
+        </div>
+    </div>
+    <div id="altlinks">
+      <h3>Stáhnout v jiných formátech:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/raw-attachment/ticket/1885/mc-git-autopoint.patch">Původní formát</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Běží na systému <a href="/about"><strong>Trac 0.12.5</strong></a><br />
+        Od <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac free software project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>
